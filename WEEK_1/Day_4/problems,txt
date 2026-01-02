@@ -1,0 +1,79 @@
+public static void modifyArray(int[] arr) {
+    arr[0] = 999;  // This DOES modify the original
+}
+
+public static void main(String[] args) {
+    int[] nums = {1, 2, 3};
+    modifyArray(nums);
+    System.out.println(nums[0]);  // 999! Original changed
+}
+```
+
+---
+
+## Quick Summary
+
+| Concept | What It Means |
+|---------|---------------|
+| Return type | What the method gives back (int, boolean, void, etc.) |
+| Parameters | What the method receives as input |
+| Overloading | Same method name, different parameters |
+| Scope | Variables only exist inside their `{ }` |
+| Pass by value | Primitives are copied, arrays are referenced |
+
+---
+
+## Session 2: Problems Time! 💪
+
+---
+
+### Problem 1: Number of Good Pairs
+```
+Given an array nums, return the number of GOOD PAIRS.
+
+A pair (i, j) is GOOD if:
+- nums[i] == nums[j]
+- i < j
+
+Example 1:
+Input: nums = [1, 2, 3, 1, 1, 3]
+Output: 4
+
+Explanation: Good pairs are:
+- (0, 3) → nums[0]=1, nums[3]=1 ✓
+- (0, 4) → nums[0]=1, nums[4]=1 ✓
+- (3, 4) → nums[3]=1, nums[4]=1 ✓
+- (2, 5) → nums[2]=3, nums[5]=3 ✓
+
+Example 2:
+Input: nums = [1, 1, 1, 1]
+Output: 6
+
+Example 3:
+Input: nums = [1, 2, 3]
+Output: 0
+```
+
+**Hint:** Remember Two Sum? Nested loops! Check every pair.
+
+---
+
+### Problem 2: How Many Numbers Are Smaller Than Current
+```
+Given an array nums, for each nums[i], count how many numbers 
+in the array are SMALLER than it.
+
+Example 1:
+Input: nums = [8, 1, 2, 2, 3]
+Output: [4, 0, 1, 1, 3]
+
+Explanation:
+- For nums[0]=8: 4 numbers smaller (1, 2, 2, 3)
+- For nums[1]=1: 0 numbers smaller
+- For nums[2]=2: 1 number smaller (1)
+- For nums[3]=2: 1 number smaller (1)
+- For nums[4]=3: 3 numbers smaller (1, 2, 2)
+
+Example 2:
+Input: nums = [6, 5, 4, 8]
+Output: [2, 1, 0, 3]
