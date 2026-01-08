@@ -1,0 +1,31 @@
+import java.util.HashMap;
+
+HashMap<String, Integer> map = new HashMap<>();
+map.put("key", 100);           // add/update
+map.get("key");                // get value → 100
+map.containsKey("key");        // check key exists → true
+map.getOrDefault("x", 0);      // get or return default
+map.remove("key");             // delete
+map.keySet();                  // all keys
+map.values();                  // all values
+```
+
+**Problem 4:** Frequency Count
+```
+Count how many times each element appears.
+Input: [1, 2, 2, 3, 3, 3]
+Output: {1=1, 2=2, 3=3}
+```
+
+**Problem 5:** First Non-Repeating Character
+```
+Find the first character that appears only once.
+Input: "leetcode" → Output: 'l'
+Input: "aabb" → Output: '_' (none found)
+```
+
+**Problem 6:** Two Sum (HashMap version)
+```
+You did this already — but redo it clean with proper understanding.
+Input: nums = [2, 7, 11, 15], target = 9
+Output: [0, 1]

@@ -1,0 +1,29 @@
+import java.util.HashSet;
+
+HashSet<Integer> set = new HashSet<>();
+set.add(5);              // add element
+set.contains(5);         // check exists → true
+set.remove(5);           // delete
+set.size();              // count elements
+```
+
+Key difference: **HashSet only stores unique values, no duplicates!**
+
+**Problem 7:** Contains Duplicate (HashSet version)
+```
+Return true if any value appears at least twice.
+Input: [1, 2, 3, 1] → Output: true
+Input: [1, 2, 3, 4] → Output: false
+```
+
+**Problem 8:** Single Number (HashSet version)
+```
+Find the element that appears only once.
+Input: [4, 1, 2, 1, 2] → Output: 4
+```
+
+**Problem 9:** Intersection of Two Arrays (HashSet version)
+```
+Return common elements (optimized from your brute force).
+Input: nums1 = [1, 2, 2, 1], nums2 = [2, 2]
+Output: [2]
